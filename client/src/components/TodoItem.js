@@ -24,14 +24,16 @@ const TodoItem = ({ id, title, completed, description }) => {
         <span className="d-flex align-items-center">
           <input
             type="checkbox"
-            className="mr-3"
             checked={completed}
             onChange={handleCheckboxClick}
           ></input>
-          <div onClick={showTodoDescription}>{title}</div> <div className="">{activeTodo ? ` - ${description}` : ''}</div>
+          <div onClick={showTodoDescription} className="ms-2">{title}</div>{" "}
+          <div className="">{activeTodo ? ` - ${description}` : ""}</div>
         </span>
-        <button onClick={handleDeleteClick} className="btn btn-danger">
-          Delete
+        <button onClick={handleDeleteClick} className="delete-btn">
+          <span>
+            <i className="fas fa-trash"></i>
+          </span>
         </button>
       </div>
     </li>

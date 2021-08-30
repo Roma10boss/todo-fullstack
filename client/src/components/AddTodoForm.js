@@ -36,7 +36,6 @@ const AddTodoForm = () => {
         required
         onChange={(event) => setDescription(event.target.value)}
       />
-
       <button type="submit" className="btn btn-primary mb-2">
         Submit
       </button>

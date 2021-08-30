@@ -12,15 +12,14 @@ const Profile = ({ history }) => {
   };
 
   return (
-    <div className="container bg-white p-4 mt-5">
-      <Link to="/"> Add Todo</Link> |
-      <Link to="#" onClick={logout}>
-        {" "}
-        Logout
-      </Link>{" "}
-      <h1>My Profile</h1>
-      <TodoList />
-    </div>
+      <div className="container bg-white p-4 mt-5">
+        <Link to="/"> Add Todo</Link> |
+        <Link to="#" onClick={logout}>
+          Logout
+        </Link>
+        <h1>My Profile</h1>
+        <TodoList />
+      </div>
   );
 };
 

@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "./actions/user";
-import "bootstrap/dist/css/bootstrap.min.css";
 import AddTodoForm from "./components/AddTodoForm";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css"
+
 
 const App = ({ history, logoutUser }) => {
   const logout = () => {

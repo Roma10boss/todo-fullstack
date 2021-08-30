@@ -29,36 +29,35 @@ const Register = ({ history, createUser }) => {
   };
 
   return (
-    <div>
-      <h1> Register </h1>{" "}
-      <form onSubmit={handleSubmit} method="post">
-        Username:{" "}
-        <input
-          type="text"
-          value={username}
-          name="username"
-          onChange={(e) => setUsername(e.target.value)}
-        />{" "}
-        <br />
-        Password:{" "}
-        <input
-          type="password"
-          value={password}
-          name="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />{" "}
-        <br />
-        Confirm Password:{" "}
-        <input
-          type="password"
-          value={confirmPassword}
-          name="confirmPassword"
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />{" "}
-        <br />
-        <input type="submit" name="" value="Signup" />
-      </form>{" "}
-      Already registered? <Link to="/login">Login</Link>
+    <div className="formWrapper">
+      <div className="box">
+        <h1> Register </h1>
+        <form onSubmit={handleSubmit} method="post">
+          <input
+            type="text"
+            value={username}
+            placeholder="Username"
+            name="username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            value={password}
+            placeholder="Password"
+            name="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <input
+            type="password"
+            value={confirmPassword}
+            placeholder="Confirm Password"
+            name="confirmPassword"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <input type="submit" name="" value="Signup" />
+        </form>
+        Already registered? <Link to="/login">Login</Link>
+      </div>
     </div>
   );
 };

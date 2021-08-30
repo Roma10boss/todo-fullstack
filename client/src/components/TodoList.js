@@ -37,13 +37,13 @@ const TodoList = () => {
 
   return (
     <div className="row col-sm-12">
-      <select onChange={filterTodos}>
+      <select onChange={filterTodos} className="form-select" aria-label="Default select example">
         <option value="all">All</option>
         <option value="completed">Completed</option>
         <option value="uncompleted">Uncompleted</option>
       </select>
 
-      <ul className="list-group">
+      <ul className="list-group pe-0">
         {filteredTodos.map((todo) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
